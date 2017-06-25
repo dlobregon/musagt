@@ -4,7 +4,7 @@ const http         = require('http'),
       contentTypes = require('./utils/content-types'),
       sysInfo      = require('./utils/sys-info'),
       env          = process.env;
-
+//variables para la configuración del express
 var express         = require('express');
 var app             = express();
 var mongoose        = require('mongoose');

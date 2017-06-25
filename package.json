@@ -1,7 +1,7 @@
 {
-  "name": "MusaGT-Dashboard-Backend",
+  "name": "openshift-cartridge-nodejs-template",
   "version": "1.0.1",
-  "description": "Custom Node.js cartridge for OpenShift - MusaGT",
+  "description": "Custom Node.js cartridge for OpenShift - sample application",
   "private": true,
   "main": "start.js",
   "dependencies": {
@@ -13,5 +13,5 @@
     "start": "node --use_strict start.js"
   },
   "author": "David Ochoa, Diego López",
-  "license": "MIT"
+  "license": "ISC"
 }

@@ -1,0 +1,104 @@
+/*
+============================LAYOUT==========================
+*/
+.box3, .box2, .box1 {
+  display:flex;
+  box-sizing: border-box;
+  min-width:100%;
+}
+
+.box1 {
+  max-height:90%;
+  flex:1 1 90%;
+}
+
+.box2 {
+  height:20px;
+}
+
+.box3 {
+  height:10%;
+  max-height:10%;
+  flex:1 1 10%;
+  background-color: #f59848 !important;
+  color: white;
+}
+
+
+.toolbar-bot{
+  display: inline;
+  margin-left: 50%;
+  height: 40% ;
+  width: 40%;
+  background: url('../img/icon.png') no-repeat 50% 15%;
+}
+
+
+.toolbar-dashboard{
+  background-color: white !important;
+  border-bottom: 2px solid black !important;
+}
+
+md-tabs-canvas{
+  display: none;
+}
+
+.menu-item{
+  padding: 0;
+  min-width: 100%;
+  color:rgba(#2bc5da, 0.67) !important;
+}
+
+/*
+==========================ROUTER============================
+*/
+#tab-content-0{
+  background-color: #D6D6CE !important;
+  color:white !important;
+}
+
+
+#tab-content-1{
+  background-color: white !important;
+}
+
+.container, .contenido{
+  min-width: 100% !important;
+}
+
+.vista{
+  display:flex;
+  box-sizing: border-box;
+  min-width:100%;
+  background-color: rgb(238, 255, 37);
+}
+
+.btn-agregar{
+  position: fixed;
+  top:80%;
+  right: 2%;
+}
+
+.dense-item:hover {
+    background-color: rgba(158, 158, 158, 0.2);
+}
+
+
+
+
+/*
+
+=======================================PRODUCTOS Y CATEGORIAS=====================================
+*/
+
+
+.avatar-image{
+  height: 70px !important;
+  width:  70px !important;
+  margin-left: 1%;
+}
+
+/*
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+*/

@@ -1,0 +1,94 @@
+<html lang="en" ng-app="musagtManager">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-controller="managerCtrl" ng-cloak layout="column">
+  <md-toolbar class="md-tall  md-warn md-hue-3 toolbar-dashboard" >
+      <md-button class="md-icon-button" aria-label="Settings"  ng-click="toggleLeft()"  hide-gt-md  style="color:white">
+        <md-icon ng-bind="'menu'"></md-icon>
+      </md-button>
+      <div class="md-accent toolbar-bot" style="border: none; margin-top: 5px !important;">
+
+      </div>
+      <span flex></span>
+    <h1 class="md-toolbar-tools" style="font-weight: lighter; font-size: 2em; ">
+      <span>MusaGT</span>
+    </h1>
+  </md-toolbar>
+
+
+
+    <div flex layout="row">
+
+      <md-sidenav
+          class="md-sidenav-left "
+          md-component-id="left"
+          md-is-locked-open="$mdMedia('gt-md')"
+          md-whiteframe="4">
+
+        <md-toolbar class="md-theme-indigo md-accent">
+         <h3  >Opciones</h3>
+          <md-button class="md-icon-button" aria-label="Settings"  ng-click="close()"  hide-gt-md  style="background-color: blue; position:absolute; right:2%; margin-top:5% !important;">
+            <md-icon ng-bind="'close'"></md-icon>
+          </md-button>
+        </md-toolbar>
+        <md-content  ng-controller="LeftCtrl">
+            <md-list-item  class="menu-item" ng-click="goTo('events'); close();">
+              <div class="md-list-item-text" >
+               <md-icon ng-bind="'pie_chart'"  md-colors="{color: 'red-A200', 'border-color': 'primary-600'}"></md-icon>
+                Eventos
+              </div>
+            </md-list-item>
+
+            <md-list-item  class="menu-item" ng-click="goTo('comments'); close();">
+              <div class="md-list-item-text" >
+               <md-icon ng-bind="'settings'"  md-colors="{color: 'blue-A200', 'border-color': 'primary-600'}"></md-icon>
+                Comentarios
+              </div>
+            </md-list-item>
+          <p hide show-gt-md>
+            Este mensaje no se mostrar&aacute; si es un dispositivo m&oacute;vil.
+          </p>
+
+        </md-content>
+
+      </md-sidenav>
+
+
+
+      <div layout="column" flex>
+        <div class="box1">
+            <div ui-view class="vista">
+            </div>
+        </div>
+        <div class="box3" hide show-gt-md>
+          hola
+        </div>
+      </div>
+
+    </div>
+
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="js/lib/ng-google-chart.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+  <script src="app.js"></script>
+  <script src="js/controllers/commentsController.js"></script>
+  <script src="js/controllers/musaManagementController.js"></script>
+  <script src="js/controllers/eventsController.js"></script>
+  <script src="js/lib/utils.js"></script>
+</body>
+
+</html>

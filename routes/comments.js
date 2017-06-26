@@ -7,8 +7,8 @@ router.route('/crear')
         res.header('Access-Control-Allow-Headers', 'Content-Type');
         var comment = new Comment();
         comment.idMuseo=req.body.idMuseo;
-        comment.calificacion=req.body.nombre;
-        comment.comentario=req.body.imagen;
+        comment.calificacion=req.body.calificacion;
+        comment.comentario=req.body.comentario;
         comment.fecha=req.body.fecha;
         comment.save(function(err) {
             if (err)

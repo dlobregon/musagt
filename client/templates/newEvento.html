@@ -1,0 +1,57 @@
+
+
+<md-dialog aria-label="Nuevo Evento">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Nuevo Evento</h2>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <div>
+          <md-input-container>
+            <label>Nombre</label>
+            <input ng-model="evento.nombre">
+          </md-input-container>
+          <md-input-container>
+            <label>Descripcion</label>
+            <input ng-model="evento.descripcion">
+          </md-input-container>
+        </div>
+          <md-input-container>
+            <label>Fecha</label>
+            <md-datepicker ng-model="evento.fecha"></md-datepicker>
+          </md-input-container>
+          <md-input-container>
+            <label>Hora</label>
+            <input ng-model="evento.hora">
+          </md-input-container>
+          <br>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Museo</label>
+            <md-select ng-model="evento.museo">
+              <md-option ng-repeat="museo in museos" value="{{museo.id}}" selected>
+                {{museo.nombre}}
+              </md-option>
+            </md-select>
+          </md-input-container>
+
+          <md-input-container>
+            <label>Imagen (URL)</label>
+            <input ng-model="evento.imagen">
+          </md-input-container>
+        </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <md-button md-colors="{background: 'red-500'}" ng-click="cancel()">
+       Cancelar
+      </md-button>
+      <md-button md-colors="{background: 'blue-500'}" ng-click="enviarEvento(evento)">
+        Ok
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

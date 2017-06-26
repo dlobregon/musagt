@@ -9,6 +9,11 @@ var express         = require('express');
 var app             = express();
 var mongoose        = require('mongoose');
 var bodyParser      = require("body-parser");
+/*rutas para los servicios*/
+var eventRoutes      = require("./routes/events.js");
+var database_url=process.env.MONGODB_URL|| "localhost/";
+mongoose.connect(database_url+ 'musagt', { db: { nativeParser: true } });
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -16,7 +21,7 @@ app.use(bodyParser.urlencoded({
 }));
 //configuración del cliente
 app.use(express.static(__dirname + '/client'));
-
+app.use("/eventos",eventRoutes);
 app.listen(env.NODE_PORT || 3000, env.NODE_IP || 'localhost', function () {
   console.log(`Application worker ${process.pid} started...`);
 });

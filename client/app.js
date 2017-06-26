@@ -5,6 +5,7 @@ angular.module('musagtManager',
 'events.controller',
 'comments.controller',
 'manager.utils',
+'eventosServices'
 ])
 
 

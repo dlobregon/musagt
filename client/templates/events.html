@@ -1,5 +1,25 @@
-<md-content   id="tab-content-0"  class="contenido">
-<br>
-<h1>Events</h1>
+<md-content id="tab-content-1" class="contenido">
+  <span style="font-weight: lighter; font-size: 3em; padding:20px;">Eventos</span>
 
+  <div flex-xs flex-gt-xs="50" layout="column" style="margin-left:20%">
+    <md-card ng-repeat="evento in eventos">
+      <img ng-src="{{evento.imagen}}" class="md-card-image" alt="Washed Out">
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">{{evento.nombre}}</span>
+        </md-card-title-text>
+      </md-card-title>
+      <md-card-content>
+          {{evento.descripcion}}
+          <br>
+          <br>
+          Fecha:
+          <br>
+          {{evento.fecha |  date:"MM/dd/yyyy ' ' h:mma"}}
+      </md-card-content>
+      </md-card>
+  </div>
+  <md-button class="md-fab  btn-agregar" aria-label="Eat cake" ng-click="showNewEvento($event)">
+            <md-icon ng-bind="'add'"  ></md-icon>
+        </md-button>
 </md-content>
